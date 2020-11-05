@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 25369);
+app.set('port', process.argv[2]);
 
 app.get('/',function(req,res){
   query_list = []
